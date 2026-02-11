@@ -1,70 +1,164 @@
-# Getting Started with Create React App
+🔐 Secure Authentication System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A production-structured authentication system built with Node.js, Express, and PostgreSQL, implementing secure user registration and login with industry-standard security practices.
 
-## Available Scripts
+Designed to demonstrate backend architecture, secure credential handling, and real-world authentication flow.
 
-In the project directory, you can run:
+* Features
 
-### `npm start`
+✅ User Registration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ User Login
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ Password hashing using bcrypt
 
-### `npm test`
+✅ JWT-based authentication
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✅ Environment variable protection with .env
 
-### `npm run build`
+✅ PostgreSQL database integration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✅ MVC-style folder structure (Routes, Controllers, Config)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✅ Secure secret management (no credentials exposed)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+* Project Architecture
+> my-Secure-Auth-System/
+> backend/
+> Routes/
+> Controllers/     
+> config/
+> db.js
+> public/
+> login.html
+> register.html
+> app.js,
+> server.js,
+> .env (ignored),
+> package.json,
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> README.md
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Architecture Flow
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Frontend (HTML forms)
+⬇
+Express Routes
+⬇
+Controllers (Business Logic)
+⬇
+PostgreSQL Database
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* 🔐 Security Implementation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project follows secure backend principles:
 
-### Code Splitting
+🔒 Passwords are hashed using bcrypt
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🔑 Authentication uses JSON Web Tokens (JWT)
 
-### Analyzing the Bundle Size
+🌍 Environment variables stored in .env (never committed)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🛡️ SQL injection protection using parameterized queries
 
-### Making a Progressive Web App
+🚫 node_modules excluded from repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🚫 Secrets removed from Git history after initial leak (real-world security lesson applied)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* 🛠️ Tech Stack
 
-### Deployment
+Node.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Express.js
 
-### `npm run build` fails to minify
+PostgreSQL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+bcrypt
+
+jsonwebtoken
+
+dotenv
+
+
+* ⚙️ Installation & Setup
+1) Clone the Repository
+git clone https://github.com/YOUR_USERNAME/secure-auth-system.git
+cd secure-auth-system/backend
+
+2) Install Dependencies
+npm install
+
+3) Create Environment File
+
+Create a .env file inside /backend:
+
+DB_USER=your_db_user
+DB_HOST=localhost
+DB_NAME=your_db_name
+DB_PASSWORD=your_password
+DB_PORT=5432
+JWT_SECRET=your_super_secret_key
+
+4) Start the Server
+npm start
+
+
+Server runs at:
+
+http://localhost:3000
+
+
+* 📌 What This Project Demonstrates
+
+This project demonstrates my ability to:
+
+Design backend systems with proper separation of concerns
+
+Implement secure authentication mechanisms
+
+Manage environment variables securely
+
+Handle Git security mistakes professionally
+
+Structure scalable Express applications
+
+Connect backend services to relational databases
+
+
+* Lessons Applied
+
+During development, I encountered and resolved:
+
+Accidental exposure of .env file
+
+Removal of sensitive files from Git tracking
+
+Proper dependency management using .gitignore
+
+This reflects real-world DevOps awareness and secure development practices.
+
+
+* 📈 Future Improvements
+
+Add refresh tokens
+
+Implement role-based access control (RBAC)
+
+Add rate limiting
+
+Add email verification
+
+Deploy live on Render / Railway
+
+Dockerize the application
+
+
+* Author
+
+Benele Mamba
+Computer Science Student
+Passionate about backend engineering, security, and system design.
